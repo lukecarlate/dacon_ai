@@ -1,7 +1,13 @@
 # DACON_AI
-
-* Ego-Vision 손 동작 데이터는 스마트 안경 등의 기술의 기본이 되는 데이터입니다.  
-위 데이터를 더욱 다양하게 다량으로 구축할 수 있다면 더욱 다양한 사업에 접목 가능합니다. 
-빠르고 정확하게 손 동작을 인식할 수 있는 모델을 개발함으로써, 인공지능 학습용 데이터를 구축하고자 합니다. 
-
 * 목적: Ego-Vision 관점의 영상에서 추출한 이미지 학습데이터를 활용한 인공지능 모델 기반의 손동작 인식 및 분류 모델 개발
+
+![Untitled (1)](https://user-images.githubusercontent.com/66737392/179512553-e2c01d71-5cac-4546-a9d7-9ea37f424163.png)
+#1. Task 
+   * The objective is to classify a certain hand gesture given an image. There were a total of 196 different types of hand gestures. 
+
+#2. Data 
+   * 6~7 image files of gesture. Each image file contains keypoints annotated as json file. Each keypoint is a 3 dimensional coordinate, 21 keypoints per hand. 
+
+#3. Approach 
+   * Nearest Neighbor 
+      * The keypoints per image are combined into a coordinate as a 63 dimensional feature vector. We chose 'k' number of neighbors in the test dataset that had similar feature vectors to the training dataset and chose the most common label as the test label. In order to prevent the features being affected by the positioning of the hand, i.e. distance from focal point, we averaged out every key point. 
