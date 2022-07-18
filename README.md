@@ -3,11 +3,11 @@
 
 ![Untitled (1)](https://user-images.githubusercontent.com/66737392/179512553-e2c01d71-5cac-4546-a9d7-9ea37f424163.png)
 #1. Task 
-    * Given a data (json), the objective is to classify a certain hand gesture. There were a total of 196 different types of hand gestures. 
+    Given a data (json), the objective is to classify a certain hand gesture. There were a total of 196 different types of hand gestures. 
       Even if it represented the same hand gesture, we were supposed to differentiate them based on the type of hand (My hand, someone else's hand, left hand, right           hand)
 
 #2. Data 
-    * 6~7 image files of gesture. Each image file contains keypoints annotated as json file. Each keypoint is a 3 dimensional coordinate, 21 keypoints per hand. 
+    6~7 image files of gesture. Each image file contains keypoints annotated as json file. Each keypoint is a 3 dimensional coordinate, 21 keypoints per hand. 
 
 #3. Approach 
    * Nearest Neighbor 
